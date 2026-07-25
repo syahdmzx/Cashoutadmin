@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transfer Service Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="logo">Transfer<span>Admin</span></div>
+
+    <div class="menu active" onclick="showPage('dashboard')">
+      <span>📊</span> Dashboard
+    </div>
+
+    <div class="menu" onclick="showPage('services')">
+      <span>💸</span> Transfer Service
+    </div>
+
+    <div class="menu" onclick="showPage('transactions')">
+      <span>📋</span> Transaksi
+    </div>
+
+    <div class="menu" onclick="showPage('banks')">
+      <span>🏦</span> Bank Malaysia
+    </div>
+
+    <div class="menu" onclick="showPage('settings')">
+      <span>⚙️</span> Tetapan
+    </div>
+
+    <div class="admin-box">
+      <div class="admin-avatar">A</div>
+      <div>
+        <b>Administrator</b>
+        <small>Online</small>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <header>
+      <div>
+        <h1 id="pageTitle">Dashboard</h1>
+        <p>Selamat datang ke Transfer Service Admin</p>
+      </div>
+
+      <div class="top-right">
+        <span class="notification">🔔</span>
+        <span class="date" id="date"></span>
+      </div>
+    </header>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="page active-page">
+
+      <div class="stats">
+
+        <div class="stat-card">
+          <div class="stat-icon purple">💰</div>
+          <div>
+            <span>Jumlah Transfer</span>
+            <h2>RM 24,850</h2>
+            <small class="up">+12.5%</small>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon blue">📋</div>
+          <div>
+            <span>Jumlah Transaksi</span>
+            <h2>186</h2>
+            <small class="up">+8.2%</small>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon green">✅</div>
+          <div>
+            <span>Berjaya</span>
+            <h2>172</h2>
+            <small>92.4%</small>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon orange">⏳</div>
+          <div>
+            <span>Pending</span>
+            <h2>14</h2>
+            <small>Perlu semakan</small>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="content-grid">
+
+        <div class="panel">
+          <div class="panel-title">
+            <h3>Servis Transfer</h3>
+            <button onclick="showPage('services')">Lihat Semua</button>
+          </div>
+
+          <div class="service-list">
+
+            <div class="service-item">
+              <div class="service-logo orange-bg">S</div>
+              <div>
+                <b>ShopeePay</b>
+                <small>Cashout Service</small>
+              </div>
+              <strong>RM 6,850</strong>
+            </div>
+
+            <div class="service-item">
+              <div class="service-logo green-bg">G</div>
+              <div>
+                <b>GrabPay</b>
+                <small>Cashout Service</small>
+              </div>
+              <strong>RM 4,250</strong>
+            </div>
+
+            <div class="service-item">
+              <div class="service-logo blue-bg">T</div>
+              <div>
+                <b>TNG eWallet</b>
+                <small>Transfer Service</small>
+              </div>
+              <strong>RM 5,120</strong>
+            </div>
+
+            <div class="service-item">
+              <div class="service-logo purple-bg">B</div>
+              <div>
+                <b>Boost</b>
+                <small>Cashout Service</small>
+              </div>
+              <strong>RM 2,180</strong>
+            </div>
+
+            <div class="service-item">
+              <div class="service-logo bank-bg">🏦</div>
+              <div>
+                <b>Bank Transfer</b>
+                <small>Malaysia Banks</small>
+              </div>
+              <strong>RM 6,450</strong>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">
+            <h3>Status Transaksi</h3>
+          </div>
+
+          <div class="circle-box">
+            <div class="circle">
+              <b>92%</b>
+              <span>Berjaya</span>
+            </div>
+          </div>
+
+          <div class="status-row">
+            <span><i class="dot green"></i> Berjaya</span>
+            <b>172</b>
+          </div>
+
+          <div class="status-row">
+            <span><i class="dot orange"></i> Pending</span>
+            <b>14</b>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="panel transaction-panel">
+
+        <div class="panel-title">
+          <h3>Transaksi Terkini</h3>
+          <button onclick="showPage('transactions')">Lihat Semua</button>
+        </div>
+
+        <div class="table-wrap">
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Pelanggan</th>
+                <th>Servis</th>
+                <th>Jumlah</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>#TRX00186</td>
+                <td>Adam</td>
+                <td>ShopeePay</td>
+                <td>RM 250</td>
+                <td><span class="badge success">Berjaya</span></td>
+              </tr>
+
+              <tr>
+                <td>#TRX00185</td>
+                <td>Hakim</td>
+                <td>Maybank</td>
+                <td>RM 500</td>
+                <td><span class="badge pending">Pending</span></td>
+              </tr>
+
+              <tr>
+                <td>#TRX00184</td>
+                <td>Amir</td>
+                <td>GrabPay</td>
+                <td>RM 150</td>
+                <td><span class="badge success">Berjaya</span></td>
+              </tr>
+
+              <tr>
+                <td>#TRX00183</td>
+                <td>Farhan</td>
+                <td>TNG eWallet</td>
+                <td>RM 300</td>
+                <td><span class="badge success">Berjaya</span></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services" class="page">
+
+      <div class="service-grid">
+
+        <div class="big-service orange-card">
+          <div class="big-icon">S</div>
+          <h2>ShopeePay</h2>
+          <p>Cashout Service</p>
+          <strong>RM 6,850</strong>
+          <button>View Service</button>
+        </div>
+
+        <div class="big-service green-card">
+          <div class="big-icon">G</div>
+          <h2>GrabPay</h2>
+          <p>Cashout Service</p>
+          <strong>RM 4,250</strong>
+          <button>View Service</button>
+        </div>
+
+        <div class="big-service blue-card">
+          <div class="big-icon">T</div>
+          <h2>TNG eWallet</h2>
+          <p>Transfer Service</p>
+          <strong>RM 5,120</strong>
+          <button>View Service</button>
+        </div>
+
+        <div class="big-service purple-card">
+          <div class="big-icon">B</div>
+          <h2>Boost</h2>
+          <p>Cashout Service</p>
+          <strong>RM 2,180</strong>
+          <button>View Service</button>
+        </div>
+
+        <div class="big-service dark-card">
+          <div class="big-icon">🏦</div>
+          <h2>Bank Transfer</h2>
+          <p>Transfer ke Bank Malaysia</p>
+          <strong>RM 6,450</strong>
+          <button onclick="showPage('banks')">Lihat Bank</button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRANSACTIONS -->
+    <section id="transactions" class="page">
+
+      <div class="panel">
+
+        <div class="panel-title">
+          <h3>Semua Transaksi</h3>
+
+          <select id="filter" onchange="filterTransactions()">
+            <option value="all">Semua Status</option>
+            <option value="success">Berjaya</option>
+            <option value="pending">Pending</option>
+          </select>
+        </div>
+
+        <div class="table-wrap">
+
+          <table id="transactionTable">
+
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Servis</th>
+                <th>Jumlah</th>
+                <th>Tarikh</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr data-status="success">
+                <td>#TRX00186</td>
+                <td>Adam</td>
+                <td>ShopeePay</td>
+                <td>RM 250</td>
+                <td>25 Jul 2026</td>
+                <td><span class="badge success">Berjaya</span></td>
+              </tr>
+
+              <tr data-status="pending">
+                <td>#TRX00185</td>
+                <td>Hakim</td>
+                <td>Maybank</td>
+                <td>RM 500</td>
+                <td>25 Jul 2026</td>
+                <td><span class="badge pending">Pending</span></td>
+              </tr>
+
+              <tr data-status="success">
+                <td>#TRX00184</td>
+                <td>Amir</td>
+                <td>GrabPay</td>
+                <td>RM 150</td>
+                <td>24 Jul 2026</td>
+                <td><span class="badge success">Berjaya</span></td>
+              </tr>
+
+              <tr data-status="success">
+                <td>#TRX00183</td>
+                <td>Farhan</td>
+                <td>TNG eWallet</td>
+                <td>RM 300</td>
+                <td>24 Jul 2026</td>
+                <td><span class="badge success">Berjaya</span></td>
+              </tr>
+
+              <tr data-status="pending">
+                <td>#TRX00182</td>
+                <td>Syafiq</td>
+                <td>CIMB Bank</td>
+                <td>RM 800</td>
+                <td>23 Jul 2026</td>
+                <td><span class="badge pending">Pending</span></td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BANKS -->
+    <section id="banks" class="page">
+
+      <div class="bank-header">
+        <h2>Bank Malaysia</h2>
+        <p>Senarai pilihan bank untuk paparan transfer service</p>
+      </div>
+
+      <div class="bank-grid">
+
+        <div class="bank-card"><b>Maybank</b><span>Maybank Berhad</span></div>
+        <div class="bank-card"><b>CIMB Bank</b><span>CIMB Group</span></div>
+        <div class="bank-card"><b>Public Bank</b><span>Public Bank Berhad</span></div>
+        <div class="bank-card"><b>RHB Bank</b><span>RHB Banking Group</span></div>
+        <div class="bank-card"><b>Hong Leong Bank</b><span>Hong Leong Financial Group</span></div>
+        <div class="bank-card"><b>Bank Islam</b><span>Bank Islam Malaysia</span></div>
+        <div class="bank-card"><b>Bank Rakyat</b><span>Bank Kerjasama Rakyat</span></div>
+        <div class="bank-card"><b>AmBank</b><span>AmBank Group</span></div>
+        <div class="bank-card"><b>Affin Bank</b><span>Affin Group</span></div>
+        <div class="bank-card"><b>BSN</b><span>Bank Simpanan Nasional</span></div>
+        <div class="bank-card"><b>UOB Malaysia</b><span>United Overseas Bank</span></div>
+        <div class="bank-card"><b>OCBC Malaysia</b><span>OCBC Bank</span></div>
+        <div class="bank-card"><b>HSBC Malaysia</b><span>HSBC Bank Malaysia</span></div>
+        <div class="bank-card"><b>Standard Chartered</b><span>Malaysia</span></div>
+        <div class="bank-card"><b>Alliance Bank</b><span>Alliance Bank Malaysia</span></div>
+        <div class="bank-card"><b>Agrobank</b><span>Bank Pertanian Malaysia</span></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SETTINGS -->
+    <section id="settings" class="page">
+
+      <div class="panel settings-panel">
+
+        <h2>Tetapan Dashboard</h2>
+
+        <label>Nama Sistem</label>
+        <input type="text" value="Transfer Service Admin">
+
+        <label>Nama Admin</label>
+        <input type="text" value="Administrator">
+
+        <label>Status Sistem</label>
+
+        <select>
+          <option>Online</option>
+          <option>Maintenance</option>
+        </select>
+
+        <button class="save-btn" onclick="saveSettings()">Simpan Tetapan</button>
+
+        <p id="saveMessage"></p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
